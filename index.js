@@ -25,7 +25,7 @@ var nez = false;
 function Nez() {
   var date = new Date();
   if(date.getHours() == date.getMinutes() && nez == false){
-    client.channels.get("383559617159888898").send("NEEEZZ !!! Caramba !");
+    client.channels.get("383559617159888898").send("NEEEZZ !!!");
     nez = true;
   }else if(date.getHours() != date.getMinutes() && nez == true) nez = false;
 }
