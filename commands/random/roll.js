@@ -1,3 +1,5 @@
+//Commande du Jeté de Dé
+
 const commando = require('discord.js-commando');
 
 class DiceRollCommand extends commando.Command {

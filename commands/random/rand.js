@@ -1,3 +1,5 @@
+//Commande du nombre random entre min et max
+
 const commando = require('discord.js-commando');
 
 class RandomCommand extends commando.Command {
