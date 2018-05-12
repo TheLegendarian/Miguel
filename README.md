@@ -1,7 +1,9 @@
 # Miguel
 Celebre bot des Unicorn Phoenix Obèses
 
-Codé en Javascript avec DiscordJS
+Codé en Javascript avec DiscordJS et Node JS
+
+installer NodeJS : https://nodejs.org/en/
 
 Tutos DiscordJS : 
 
