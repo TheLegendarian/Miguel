@@ -44,7 +44,7 @@ client.on('message', (message) => {
         message.channel.send('Si, Maestro !');
         break;
       case "112908045503176704":
-        message.channel.send('Soy aquí mi creador !');
+        message.channel.send('Aquí estoy mi creador !');
         break;
       default:
           message.channel.send('Si señor ?');
