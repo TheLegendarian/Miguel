@@ -9,6 +9,7 @@ var general = client.channels.get("383559617159888898");
 
 //Truc pour les commandes
 client.registry.registerGroup('random', 'Random');
+client.registry.registerGroup('react', 'React');
 client.registry.registerDefaults();
 client.registry.registerCommandsIn(__dirname + "/commands");
 
