@@ -37,9 +37,18 @@ client.on('message', (message) => {
 
   if(message.author.bot) return; //Empeche le bot de se repondre
 
-  //Appel de miguel
+  //Appel de miguel et reponse personnalisée
   if(message.content == 'miguel' || message.content == 'Miguel' || message.content == "MIGUEL"){
-    message.channel.send('Si señor ?');
+    switch(message.author.id){
+      case "237615010518532107":
+        message.channel.send('Si, Maestro !');
+        break;
+      case "112908045503176704":
+        message.channel.send('Soy aquí mi creador !');
+        break;
+      default:
+          message.channel.send('Si señor ?');
+    }
   }
 
   //Merci Miguel
