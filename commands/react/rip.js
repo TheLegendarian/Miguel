@@ -14,6 +14,7 @@ class RipCommand extends commando.Command {
   }
 
   async run(message, args) {
+    message.delete();
     switch(Math.floor(Math.random()*10)){
       case 0:
       message.channel.send("Riperoni, Amigo");

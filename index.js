@@ -28,7 +28,16 @@ function Nez() {
   var date = new Date();
   if(date.getHours() == date.getMinutes() && nez == false){
     client.channels.get("383559617159888898").send("NEEEZZ !!!");
+    var msg;
+    if (client.user.lastMessage == null) {
+        setTimeout(function(){
+          msg = client.user.lastMessage;
+        }, 500);
+    } else var msg = client.user.lastMessage;
     nez = true;
+    setTimeout(function () {
+      msg.delete();
+    }, 600000);
   }else if(date.getHours() != date.getMinutes() && nez == true) nez = false;
 }
 
@@ -39,12 +48,12 @@ client.on('message', (message) => {
   if(message.author.bot) return; //Empeche le bot de se repondre
 
   //Appel de miguel et reponse personnalisée
-  if(message.content == 'miguel' || message.content == 'Miguel' || message.content == "MIGUEL"){
+  if(message.content.toLowerCase() == 'miguel'){
     switch(message.author.id){
-      case "237615010518532107":
+      case "237615010518532107": //Valentine
         message.channel.send('Si, Maestro !');
         break;
-      case "112908045503176704":
+      case "112908045503176704": //Théo
         message.channel.send('Aquí estoy mi creador !');
         break;
       default:
@@ -53,8 +62,7 @@ client.on('message', (message) => {
   }
 
   //Merci Miguel
-  if(message.content == 'merci miguel' || message.content == 'Merci Miguel'
-  || message.content == 'Merci miguel' || message.content == 'MERCI MIGUEL'){
+  if(message.content.toLowerCase() == 'merci miguel'){
     message.channel.send('De nada amigo !');
   }
 
