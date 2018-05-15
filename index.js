@@ -42,6 +42,7 @@ function Nez() {
 }
 
 
+
 //Detection basique de message
 client.on('message', (message) => {
 
